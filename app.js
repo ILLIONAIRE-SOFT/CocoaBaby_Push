@@ -55,7 +55,7 @@ app.get('/notification/diary/:token', (req, res) => {
 	note.expiry = Math.floor(Date.now() / 1000) + 3600; // Expires 1 hour from now. 
 	note.badge = 1;
 	note.sound = "ping.aiff";
-	note.alert = "New diary from mom";
+	note.alert = "New diary from mommy";
 	// note.payload = {'messageFrom': 'John Appleseed'};
 	note.topic = "com.Sohn.CocoaBaby";
 
