@@ -1,18 +1,18 @@
 const express = require('express')
 const app = express()
 
-	app.get('/', (req, res) => {
-			res.send('Hi');
-			var apn = require('apn');
+app.get('/', (req, res) => {
+	res.send('Hi');
+	var apn = require('apn');
 
-			var options = {
-				token: {
-				key: 'AuthKey_WV97FAUVT3.p8',
-				keyId: 'WV97FAUVT3',
-				teamId: '23EFP3FERN'
-				},
-				production: false
-			};
+	var options = {
+		token: {
+		key: 'AuthKey_WV97FAUVT3.p8',
+		keyId: 'WV97FAUVT3',
+		teamId: '23EFP3FERN'
+		},
+		production: false
+	};
 
 var apnProvider = new apn.Provider(options);
 
