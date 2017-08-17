@@ -56,7 +56,7 @@ app.get('/notification/diary/:token', (req, res) => {
 	note.badge = 1;
 	note.sound = "ping.aiff";
 	note.alert = "New diary from mom";
-	note.payload = {'messageFrom': 'John Appleseed'};
+	// note.payload = {'messageFrom': 'John Appleseed'};
 	note.topic = "com.Sohn.CocoaBaby";
 
 	apnProvider.send(note, deviceToken).then( (result) => {
@@ -65,8 +65,35 @@ app.get('/notification/diary/:token', (req, res) => {
 	});
 })
 
-app.post('/notification/diary', (req, res) => {
-	console.log(res)
+app.get('/notification/comment/:token', (req, res) => {
+	var apn = require('apn');
+
+	var options = {
+		token: {
+			key: 'AuthKey_WV97FAUVT3.p8',
+			keyId: 'WV97FAUVT3',
+			teamId: '23EFP3FERN'
+		},
+		production: false
+	};
+
+	var apnProvider = new apn.Provider(options);
+
+	let deviceToken = req.params.token
+
+	var note = new apn.Notification();
+
+	note.expiry = Math.floor(Date.now() / 1000) + 3600; // Expires 1 hour from now. 
+	note.badge = 1;
+	note.sound = "ping.aiff";
+	note.alert = "New comment from daddy";
+	// note.payload = {'messageFrom': 'John Appleseed'};
+	note.topic = "com.Sohn.CocoaBaby";
+
+	apnProvider.send(note, deviceToken).then( (result) => {
+		// see documentation for an explanation of result 
+		console.log(result)
+	});
 })
 
 app.listen(8080, () => console.log('Server running on port 3000!'))
