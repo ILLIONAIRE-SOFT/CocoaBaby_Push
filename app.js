@@ -32,6 +32,10 @@ app.get('/', (req, res) => {
 	});
 })
 
+app.get('/notification/diary/:token', (req, res) => {
+	console.log(req.params.token)
+})
+
 app.post('/notification/diary', (req, res) => {
 	console.log(res)
 })
