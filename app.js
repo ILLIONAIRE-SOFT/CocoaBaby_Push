@@ -90,6 +90,7 @@ app.get('/notification/comment/:token', (req, res) => {
 
 	apnProvider.send(note, deviceToken).then( (result) => {
 		// see documentation for an explanation of result 
+		res.end();
 		console.log(result)
 	});
 })
