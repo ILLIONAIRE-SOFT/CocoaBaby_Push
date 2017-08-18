@@ -33,8 +33,6 @@ const app = express()
 // })
 
 app.get('/notification/diary/:token', (req, res) => {
-	console.log(req.params.token)
-
 	var apn = require('apn');
 
 	var options = {
