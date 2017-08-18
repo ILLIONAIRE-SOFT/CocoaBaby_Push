@@ -88,9 +88,11 @@ app.get('/notification/comment/:token', (req, res) => {
 	// note.payload = {'messageFrom': 'John Appleseed'};
 	note.topic = "com.Sohn.CocoaBaby";
 
+	res.send('Success');
+	
 	apnProvider.send(note, deviceToken).then( (result) => {
 		// see documentation for an explanation of result 
-		res.send('Success');
+
 		console.log(result)
 	});
 })
