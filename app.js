@@ -86,7 +86,7 @@ app.get('/notification/comment/:token', (req, res) => {
 	note.expiry = Math.floor(Date.now() / 1000) + 3600; // Expires 1 hour from now. 
 	note.badge = 1;
 	note.sound = "ping.aiff";
-	note.alert = "New comment from daddy";
+	note.alert = "New comment from dad";
 	// note.payload = {'messageFrom': 'John Appleseed'};
 	note.topic = "com.Sohn.CocoaBaby";
 
