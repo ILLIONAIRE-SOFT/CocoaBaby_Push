@@ -96,4 +96,4 @@ app.get('/notification/comment/:token', (req, res) => {
 	});
 })
 
-app.listen(8080, () => console.log('Server running on port 3000!'))
+app.listen(8080, () => console.log('Server running on port 8080!'))
