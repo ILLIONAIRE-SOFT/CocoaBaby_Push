@@ -69,7 +69,7 @@ app.get('/notification/comment/:token', (req, res) => {
 
 	var options = {
 		token: {
-			key: 'AuthKey_B#LMY59MP4.p8',
+			key: 'AuthKey_B3LMY59MP4.p8',
 			keyId: 'B3LMY59MP4',
 			teamId: '87BH34CAP6'
 		},
