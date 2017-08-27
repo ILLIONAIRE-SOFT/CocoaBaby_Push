@@ -37,9 +37,9 @@ app.get('/notification/diary/:token', (req, res) => {
 
 	var options = {
 		token: {
-			key: 'AuthKey_WV97FAUVT3.p8',
-			keyId: 'WV97FAUVT3',
-			teamId: '23EFP3FERN'
+			key: 'AuthKey_B3LMY59MP4.p8',
+			keyId: 'B3LMY59MP4',
+			teamId: '87BH34CAP6'
 		},
 		production: false
 	};
@@ -69,9 +69,9 @@ app.get('/notification/comment/:token', (req, res) => {
 
 	var options = {
 		token: {
-			key: 'AuthKey_WV97FAUVT3.p8',
-			keyId: 'WV97FAUVT3',
-			teamId: '23EFP3FERN'
+			key: 'AuthKey_B#LMY59MP4.p8',
+			keyId: 'B3LMY59MP4',
+			teamId: '87BH34CAP6'
 		},
 		production: false
 	};
