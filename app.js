@@ -41,7 +41,7 @@ app.get('/notification/diary/:token', (req, res) => {
 			keyId: 'B3LMY59MP4',
 			teamId: '87BH34CAP6'
 		},
-		production: true
+		production: false
 	};
 
 	var apnProvider = new apn.Provider(options);
