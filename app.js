@@ -41,7 +41,7 @@ app.get('/notification/diary/:token', (req, res) => {
 			keyId: 'B3LMY59MP4',
 			teamId: '87BH34CAP6'
 		},
-		production: false
+		production: true 
 	};
 
 	var apnProvider = new apn.Provider(options);
@@ -55,7 +55,7 @@ app.get('/notification/diary/:token', (req, res) => {
 	note.sound = "ping.aiff";
 	note.alert = "New diary from mommy";
 	// note.payload = {'messageFrom': 'John Appleseed'};
-	note.topic = "com.Sohn.CocoaBaby";
+	note.topic = "com.ILSO.CocoaBaby";
 
 	apnProvider.send(note, deviceToken).then( (result) => {
 		// see documentation for an explanation of result 
@@ -87,7 +87,7 @@ app.get('/notification/comment/:token', (req, res) => {
 	note.sound = "ping.aiff";
 	note.alert = "New comment from dad";
 	// note.payload = {'messageFrom': 'John Appleseed'};
-	note.topic = "com.Sohn.CocoaBaby";
+	note.topic = "com.ILSO.CocoaBaby";
 	
 	apnProvider.send(note, deviceToken).then( (result) => {
 		// see documentation for an explanation of result 
